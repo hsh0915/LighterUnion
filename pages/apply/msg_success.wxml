@@ -1,0 +1,17 @@
+<view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="50"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">申请成功</view>
+            <view class="weui-msg__desc">我们会尽快审核您的信息，请您耐心等待。申请进度请到用户中心"我的申请"查看</view>
+            <view class="weui-msg__opr-area">
+                <view class="weui-btn-area">
+                    <button class="weui-btn" type="primary" bindtap="btnconfirm">确认</button>
+                    <!-- <button class="weui-btn" type="default">辅助操作</button> -->
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

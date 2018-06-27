@@ -1,0 +1,108 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+    <view class="weui-cells__title">以下为申请人信息，请如实填写</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" bindinput="nameInput"  bindblur="namebindblur"placeholder="申请人真实姓名" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">身份证号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type='idcard' bindinput="idcardInput" bindblur="incardbindblur" placeholder="申请人身份证号" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">关系</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindRelationyChange" value="{{relationIndex}}" range="{{relations}}">
+            <view class="weui-select weui-select_in-select-after">{{relations[relationIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">以下为监护人信息，请如实填写</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" bindinput="pnameInput" bindblur=" namebindblur"  placeholder="监护人真实姓名" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">身份证号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type='idcard' bindinput="pidcardInput" bindblur="incardbindblur"  placeholder="监护人身份证号" />
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__tips">以上信息请真实填写,以保证你的申请通过审核</view>
+
+    <view class="weui-cells__title">请输入卡号和信息，方便我们联系您!</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd" style="width: 105px">
+          <picker bindchange="bindBankCodeChange" value="{{bankCodeIndex}}" range="{{bankCodes}}">
+            <view class="weui-select">{{bankCodes[bankCodeIndex]}}</view>
+          </picker>
+        </view>
+        <view class="weui-cell__bd weui-cell__bd_in-select-before">
+          <input class="weui-input" type='number' bindinput="cardNumInput"  bindblur="cardbindblur" placeholder="请输入卡号" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">申请金额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type='number' bindinput="moneyNUmInput" placeholder="申请金额，单次不超过5000" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type='number' bindinput="phoneInput"  bindblur="phonebindblur"placeholder="手机号" />
+        </view>
+      </view>
+
+    </view>
+    <checkbox-group bindchange="bindAgreeChange">
+      <label class="weui-agree" for="weuiAgree">
+        <view class="weui-agree__text">
+          <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+          <view class="weui-agree__checkbox-icon">
+            <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+          </view>
+          阅读并同意
+          <navigator url="" class="weui-agree__link">《相关条款》</navigator>
+        </view>
+      </label>
+    </checkbox-group>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="loginBtnClick">申请</button>
+    </view>
+  </view>
+</view>
+<!-- <view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__links">
+    <navigator url="/pages/details/AboutOur/aboutour" class="weui-footer__link">关于我们</navigator>
+  </view>
+  <view class="weui-footer__text">Copyright © 2016-2018 打火机公益联盟</view>
+</view> -->

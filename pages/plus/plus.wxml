@@ -1,0 +1,13 @@
+<view class="page">
+  <image style='height: 450px;width:100%' src='/images/111.png' />
+  <view class="page__bd page__bd_spacing">
+    <button type='primary' bindtap='btnclick'>发起申请</button>
+		</view>
+    <view class="weui-footer weui-footer_fixed-bottom">
+      <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">底部链接</navigator>
+      <!-- </view> -->
+      <view class="weui-footer__text">Copyright © 2016-2018 打火机公益联盟</view>
+    </view>
+  
+</view>

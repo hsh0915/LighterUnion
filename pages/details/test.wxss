@@ -1,0 +1,6 @@
+/* pages/details/test.wxss */
+page{
+	  margin-top: 100rpx;
+	 align-items: center; 
+    background-color: #FFFFFF;
+}

@@ -1,0 +1,18 @@
+/* pages/plus/plus.wxss */
+.pluscontainer{
+  display: flex;
+  flex-direction: column;
+}
+.page button{
+  margin-top: 20px;
+  width: 50%;
+  color: white;
+  border-radius: 2;
+  font-size: 14px;
+}
+.weui-footer{
+    margin-bottom: 50px;
+}
+.weui-footer_fixed-bottom{
+    margin-bottom: 0;
+}

@@ -1,0 +1,67 @@
+<view class="page">
+    <block wx:if="{{hasUserInfo}}">
+        <view class="page__hd">
+            <view class="page__title">Apply</view>
+            <view class="page__desc">表单详细</view>
+        </view>
+        <view wx:for="{{results}}" wx:key="*this">
+            <view class="page__bd">
+                <view class="weui-form-preview">
+                    <view class="weui-form-preview__hd">
+                        <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">申请金额</view>
+                            <view class="weui-form-preview__value_in-hd">¥{{item.money}}.00</view>
+                        </view>
+                    </view>
+                    <view class="weui-form-preview__bd">
+                        <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">本人姓名</view>
+                            <view class="weui-form-preview__value">{{item.name}}</view>
+                        </view>
+                        <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">本人IDcard</view>
+                            <view class="weui-form-preview__value">{{item.idcard}}</view>
+                        </view>
+                        <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">监护人姓名</view>
+                            <view class="weui-form-preview__value">{{item.pname}}</view>
+                        </view>
+                        <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">监护人IDcard</view>
+                            <view class="weui-form-preview__value">{{item.pidcard}}</view>
+                        </view>
+                        <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">银行卡号</view>
+                            <view class="weui-form-preview__value">{{item.cardNum}}</view>
+                        </view>
+                        <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">监护人IDcard</view>
+                            <view class="weui-form-preview__value">{{item.phoneNum}}</view>
+                        </view>
+                    </view>
+                    <!-- <view class="weui-form-preview__ft">   此单元可以用来修改申请信息~~~！！！！
+                        <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">操作</navigator>
+                      </view> -->
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{!hasUserInfo}}">
+        <view class="page__hd">
+            <view class="page__title"></view>
+            <view class="page__desc"></view>
+        </view>
+        <view class="page__bd">
+            <view class="weui-loadmore">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+            <view class="weui-loadmore weui-loadmore_line">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+            </view>
+            <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+            </view>
+        </view>
+    </block>
+</view>

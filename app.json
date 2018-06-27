@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/user/user",
+    "pages/plus/plus",
+    "pages/apply/apply",
+    "pages/details/myapply",
+    "pages/details/mylove",
+    "pages/details/test",
+    "pages/apply/msg_success",
+    "pages/details/AboutOur/aboutour"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1ccc85",
+    "navigationBarTitleText": "打火机公益联盟",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "green",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeG.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/plus/plus",
+        "iconPath": "images/plus.png",
+        "selectedIconPath": "images/plusG.png",
+        "text": "发起"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/Person.png",
+        "selectedIconPath": "images/PersonG.png",
+        "text": "我"
+      }
+    ]
+  }
+}

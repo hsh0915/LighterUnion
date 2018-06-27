@@ -1,0 +1,11 @@
+/* pages/applyA/apply.wxss */
+.weui-footer{
+	 margin-top: 0px;
+    margin-bottom: 10px;
+}
+/* .weui-footer{
+    margin-bottom: 50px;
+} */
+.weui-footer_fixed-bottom{
+    margin-bottom: 0;
+}

@@ -1,0 +1,50 @@
+<view class="container">
+
+  <view class="usermotto">
+    <text>{{motto}}</text>
+  </view>
+
+
+
+  <view class="item">
+
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          当前选择：{{array[index]}}
+          <text> > </text>
+        </view>
+      </picker>
+    </view>
+
+    <view class="login-item">
+      <view class="login-pwd">
+        <input type="number" style="flex-grow:1" bindinput="usernameInput" placeholder="请输入手机号" />
+        <text>获取验证码</text>
+      </view>
+    </view>
+
+    <view class="login-item">
+      <!-- <view class="login-item-info">密码</view> -->
+      <view class="login-pwd">
+        <input type="number" style="flex-grow:1" password="true" bindinput="passwordInput" placeholder="请输入填写手机验证码" />
+      </view>
+    </view>
+
+    <view class="login-item bottom">
+      <button class="login-btn" bindtap="loginBtnClick" formType="submit">登录</button>
+    </view>
+
+
+
+
+
+    <text> 已阅读并同意《打火机公益联盟注册协议》</text>
+    <text>使用社交账号登陆</text>
+
+    <view class='wechat-icon image'>
+      <image src="/images/wechat.png" bindtap='wetchatLogin'></image>
+    </view>
+  </view>
+
+</view>

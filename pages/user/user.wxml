@@ -1,0 +1,63 @@
+<view class="page">
+  <view class="page__hd">
+    <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>  -->
+    <!-- <open-data class='image' type="userAvatarUrl"></open-data>
+    <open-data type="userNickName"></open-data> -->
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="image" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-cells__title">以下为你的个人信息，如有错误请修改</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../details/test" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">个人信息</view>
+          <view class="weui-cell__ft">详细信息</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">以下是您申请,或者帮助过的详细信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../details/myapply" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">我的申请</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="../details/test" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">我曾帮助</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../details/test" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">我的钱包</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <button bindtap="open" plain="true" class="weui-cell weui-cell_access" style="text-align:left;height:44px;border:none;" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">联系我们</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="height:2px"></view>
+        </button>
+        <!-- <navigator url="../details/test" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">联系我们</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator> -->
+      </view>
+    </view>
+
+  </view>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__links">
+      <navigator url="/pages/details/AboutOur/aboutour" class="weui-footer__link">关于我们</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2016-2018 打火机公益联盟</view>
+  </view>
+</view>

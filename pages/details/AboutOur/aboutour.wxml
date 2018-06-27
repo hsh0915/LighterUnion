@@ -1,0 +1,32 @@
+<!--pages/details/AboutOur/aboutour.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">AboutUs</view>
+        <view class="page__desc">关于我们</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1"></view>
+            <view class="weui-article__section">
+                <view class="weui-article__title"></view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">我们是</view>
+                    <view class="weui-article__p">
+                        打火机公益联盟是致力于解决机场二手打火机的处理问题，提高机场服务的同时，
+                        为社会公益做出贡献的公益组织,你的善款将直接流向西安交通大学基金会组织。
+                    </view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="/images/1.jpg" mode="aspectFit" style="height: 180px" />
+                        
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">我们的目的</view>
+                    <view class="weui-article__p">
+                        我们帮助机场解决因安检丢弃的打火机，我们放眼未来，以一种更为环保、健康的方式对可利用资源进行充分使用，以平等、包容的态度对待特殊家庭子女，以自己的微薄之力为社会的公益事业做出贡献。
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
